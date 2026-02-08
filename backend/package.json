@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/getEphemeralKey.js",
+    "dev": "tsc && node dist/getEphemeralKey.js"
+  },
+  "dependencies": {
+    "@types/node": "^24.5.2",
+    "dotenv": "^17.2.2",
+    "node-fetch": "^3.3.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.9.2"
+  }
+}

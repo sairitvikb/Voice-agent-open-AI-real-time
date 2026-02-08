@@ -23,6 +23,9 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const ENV_PATH = path.resolve(__dirname, '../../frontend/.env');
+// Fail fast if the OpenAI API key is missing.
+// This prevents accidental unauthenticated requests and makes
+// misconfiguration obvious during development.
 
 async function getEphemeralKey() {
   if (!OPENAI_API_KEY) {

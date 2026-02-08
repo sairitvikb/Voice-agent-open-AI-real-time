@@ -54,6 +54,10 @@ async function getEphemeralKey() {
   const data = await response.json() as { value: string };
   return data.value;
 }
+// Updates the frontend .env file with the ephemeral key.
+// This approach is intended for local development only.
+// In production systems, ephemeral keys are typically
+// returned dynamically rather than written to disk.
 
 async function updateEnvFile(ephemeralKey: string) {
   let envContent = '';

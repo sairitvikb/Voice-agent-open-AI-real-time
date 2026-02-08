@@ -44,6 +44,10 @@ async function getEphemeralKey() {
       },
     }),
   });
+  // Treat non-200 responses as hard failures.
+// We intentionally surface status information to aid debugging
+// while keeping the failure localized to this script.
+
   if (!response.ok) {
     throw new Error(`Failed to fetch ephemeral key: ${response.statusText}`);
   }

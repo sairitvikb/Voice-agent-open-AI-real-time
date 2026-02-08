@@ -81,6 +81,10 @@ async function updateEnvFile(ephemeralKey: string) {
   try {
     const ephemeralKey = await getEphemeralKey();
     await updateEnvFile(ephemeralKey);
+    // Log a concise success message so developers can verify
+// that the ephemeral key generation and write operation
+// completed successfully without inspecting files manually.
+
   console.log('Ephemeral key updated in frontend/.env');
   } catch (err) {
     console.error('Error updating ephemeral key:', err);

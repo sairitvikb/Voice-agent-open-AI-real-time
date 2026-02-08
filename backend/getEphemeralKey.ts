@@ -1,3 +1,16 @@
+/**
+ * Ephemeral Key Generator
+ *
+ * This script generates a short-lived OpenAI Realtime client secret
+ * using a server-side API key. The ephemeral key is used by the frontend
+ * to authenticate WebRTC / Realtime sessions without exposing
+ * long-lived credentials.
+ *
+ * Security rationale:
+ * - OPENAI_API_KEY is never sent to the browser
+ * - Ephemeral keys have limited lifetime and scope
+ */
+
 import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';

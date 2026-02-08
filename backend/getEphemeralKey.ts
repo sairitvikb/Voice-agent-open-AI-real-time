@@ -25,6 +25,10 @@ import dotenv from 'dotenv';
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+// Resolve the frontend .env path explicitly to avoid ambiguity
+// when this script is executed from different working directories.
+// Using absolute paths prevents subtle deployment and CI issues.
+
 const ENV_PATH = path.resolve(__dirname, '../../frontend/.env');
 // Fail fast if the OpenAI API key is missing.
 // This prevents accidental unauthenticated requests and makes

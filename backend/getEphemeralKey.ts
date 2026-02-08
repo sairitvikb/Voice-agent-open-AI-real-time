@@ -10,6 +10,9 @@
  * - OPENAI_API_KEY is never sent to the browser
  * - Ephemeral keys have limited lifetime and scope
  */
+// node-fetch is used instead of the native fetch API to ensure
+// consistent behavior across Node.js versions that do not yet
+// support fetch natively or require experimental flags.
 
 import fetch from 'node-fetch';
 import fs from 'fs';

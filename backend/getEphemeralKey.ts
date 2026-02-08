@@ -15,6 +15,9 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
+// Load environment variables from a backend-scoped .env file.
+// This ensures secrets remain server-side and are not bundled
+// into frontend assets.
 
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 

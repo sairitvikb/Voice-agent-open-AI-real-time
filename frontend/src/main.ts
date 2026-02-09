@@ -37,7 +37,10 @@ export async function realtimeVoice(element: HTMLButtonElement) {
       If the question is NOT about Indian tourism, reply with exactly: "I can not reply to this question" and do not say anything else.`,
   });
   const session = new RealtimeSession(agent);
-  // Automatically connects your microphone and audio output in the browser via WebRTC.
+  // WebRTC note:
+// Keep audio processing lightweight to reduce latency.
+// Avoid blocking the main thread during realtime streaming.
+// Automatically connects your microphone and audio output in the browser via WebRTC.
   try {
     // Microphone permission is required for realtime voice.
 // Handle browser permission prompts and show a clear UI state

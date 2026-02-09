@@ -7,8 +7,7 @@ This project implements a seamless audio chat functionality on a web page using 
 
 - Real-time audio chat with OpenAI's bot.
 - Users can ask questions about Indian tourism.
-- The bot only responds to questions about Indian tourism. For other topics, it replies:  
-  **"I can not reply to this question"**
+- The bot only responds to questions about Indian tourism.
 - Seamless follow-up: users can ask the next question without pressing any buttons.
   ## Setup Instructions
 

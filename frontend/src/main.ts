@@ -1,3 +1,8 @@
+// Frontend flow:
+// 1) Request ephemeral key from backend
+// 2) Use ephemeral key to authenticate realtime session
+// 3) Stream microphone audio + play assistant audio
+
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'

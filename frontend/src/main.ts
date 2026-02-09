@@ -39,6 +39,10 @@ export async function realtimeVoice(element: HTMLButtonElement) {
   const session = new RealtimeSession(agent);
   // Automatically connects your microphone and audio output in the browser via WebRTC.
   try {
+    // Microphone permission is required for realtime voice.
+// Handle browser permission prompts and show a clear UI state
+// when access is denied or unavailable.
+
     await session.connect({
       // To get this ephemeral key string, you can run the following command or implement the equivalent on the server side:
       // curl -s -X POST https://api.openai.com/v1/realtime/client_secrets -H "Authorization: Bearer $OPENAI_API_KEY" -H "Content-Type: application/json" -d '{"session": {"type": "realtime", "model": "gpt-realtime"}}' | jq .value
